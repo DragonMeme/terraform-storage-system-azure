@@ -11,7 +11,7 @@ variable "tenant_id" {
 }
 
 variable "resourceName" {
-    default = "RG_TEST"
+    default = "RG_VM"
     description = "Name of the resource group."
 }
 
@@ -21,7 +21,7 @@ variable "region" {
 }
 
 variable "storageAccountName" {
-    default = "msa2019interntfstatetest"
+    default = "statestoragelvm"
     description = "Name of the storage account."
 }
 
@@ -30,19 +30,10 @@ variable "containerAccountName" {
     description = "Name of the container in the storage account."
 }
 
-
-# tag environment
-variable "tagEnvironment" {
-    default = "TEST"
-    description = "Add tag to what the purpose of what the scripts here does overall."
-}
-
-variable "tagProject" {
-    default = "Store Shared State"
-    description = "Add tag to what the purpose of what the scripts here does overall."
-}
-
-variable "tagAuthor" {
-    default = "Anonymous"
-    description = "Add name of author."
+variable "tags" {
+    default = {
+        Environment = "TEST"
+        Project = "Store Shared State"
+        CreatedBy = "Anonymous"
+    }
 }
