@@ -11,7 +11,7 @@ variable "tenant_id" {
 }
 
 variable "resourceName" {
-    default = "RG_VM"
+    default = "RG_LVM"
     description = "Name of the resource group."
 }
 
