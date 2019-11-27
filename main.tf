@@ -25,7 +25,7 @@ resource "azurerm_storage_account" "test" {
     account_replication_type    = "LRS"
 }
 
-# Create container
+# Create container to store the state file.
 resource "azurerm_storage_container" "test" {
     name = var.containerAccountName
     resource_group_name   = azurerm_resource_group.test.name

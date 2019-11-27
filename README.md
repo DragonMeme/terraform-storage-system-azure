@@ -35,5 +35,5 @@ OPTIONAL: Run `terraform plan` after init.
 
 5.) Implementation successful when you receive the output command which is of the form:
 ```bash
-export ARM_ACCESS_KEY=$(az storage account keys list --resource-group RG --account-name tfstatetest --query [0].value -o tsv)
+export ARM_ACCESS_KEY=$(az storage account keys list --resource-group RG_LVM --account-name statestoragelvm --query [0].value -o tsv)
 ```
